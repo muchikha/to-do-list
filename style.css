@@ -98,6 +98,6 @@ text-decoration: line-through;
 }
 
 ul li.checked::before{
-color: #666;
+color: #665;
 background-image: url(images/checked.png);
 }
