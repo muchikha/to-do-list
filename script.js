@@ -12,9 +12,22 @@ ListContainer.appendChild(li);
 
 }
 inputBox.value = "";
-
+saveTask();
 }
+
+ListContainer.addEventListener("click", function(e){
+
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveTask();
+    }
+});
 
 function saveTask(){
     localStorage.setItem("data",ListContainer.innerHTML);
 }
+function showTask(){
+    ListContainer.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
