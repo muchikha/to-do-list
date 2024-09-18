@@ -14,3 +14,7 @@ ListContainer.appendChild(li);
 inputBox.value = "";
 
 }
+
+function saveTask(){
+    localStorage.setItem("data",ListContainer.innerHTML);
+}
