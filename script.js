@@ -15,10 +15,13 @@ inputBox.value = "";
 saveTask();
 }
 
-ListContainer.addEventListener("click", function(e){
+ListContainer.addEventListener("click",function(e){
 
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
+        saveTask();
+    }else if(e.target.tagName === "SPAN"){
+        e.target.classList.remove();
         saveTask();
     }
 });
